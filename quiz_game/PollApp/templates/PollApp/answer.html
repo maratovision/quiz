@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Answer</title>
+</head>
+<body>
+    <h1>Please choice right answer for question</h1>
+    <div>
+        <h4>{{ question.question }}</h4>
+        <p>{{ question.choice }}</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <input name="submit" type="submit">
+        </form>
+    </div>
+</body>
+</html>

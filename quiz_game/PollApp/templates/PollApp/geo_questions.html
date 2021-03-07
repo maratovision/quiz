@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is questions about Geography</title>
+</head>
+<body>
+    <h1>This is poll in geography theme</h1>
+    {% for i in question %}
+    <div>
+        <h4>{{ i.question }}</h4>
+        <p>{{ i.choice }}</p>
+    </div>
+    <a href="#">Answer</a>
+    {% endfor %}
+</body>
+</html>
