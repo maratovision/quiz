@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Answer</title>
-</head>
+ <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
 <body>
-    <h1>Please choice right answer for question</h1>
+     <div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-5">
+        <h3>Please choice right answer for question</h3>
     <div>
-        <h4>{{ question.question }}</h4>
+        <h5>{{ question.question }}</h5>
         <p>{{ question.choice }}</p>
         <form action="" method="POST">
             {% csrf_token %}
             {{ form }}
             <input name="submit" type="submit">
         </form>
+        <br>
+        <a href="{% url 'geo_questions' %}">Back to list</a>
     </div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
 </body>
 </html>

@@ -19,8 +19,8 @@ def math_questions(request):
     return render(request, 'PollApp/math_questions.html')
 
 
-def answer(request, question_id):
-    question = ChoiceAnswer.objects.get(id = question_id)
+def answer(request, i_id):
+    question = ChoiceAnswer.objects.get(id = i_id)
     form = AnswerForm(initial={'question': question})
     context = {'question': question, 'form': form}
     if request.method == 'POST':
